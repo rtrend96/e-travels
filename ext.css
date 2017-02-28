@@ -1,0 +1,31 @@
+Body
+{
+	BACKGROUND-COLOR:"#940C0F";
+}
+
+.t
+{
+   
+    MARGIN-LEFT: 10px;   
+    MARGIN-RIGHT: 10px;  
+    
+    BORDER-COLOR:CYAN;
+}
+
+.t1
+{
+	FONT-FAMILY: Arial Rounded MT Bold;
+    COLOR:WHITE;
+     FONT-SIZE: 15px;
+}
+
+.t2
+{
+	background-color:chocolate;
+	color:green;
+}
+
+.t4
+{
+   
+    BACKGROUND-IMAGE: url('file:%22td-bg.gif%22')

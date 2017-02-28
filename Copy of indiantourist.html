@@ -1,0 +1,301 @@
+<html>
+<head>
+	<title> Main page </title>
+
+<script lang="javascript">
+
+arr = new Array(4);
+	arr[0]="india-gate.jpg";
+	arr[1]="khajrahu-mp.jpg";
+	arr[2]="dancer.jpg";
+	arr[3]="tajmahal-tour-image.gif";
+a = new Array(5);
+	
+	a[0]="s2.jpg";
+	a[1]="s3.jpg";
+	a[2]="s7.jpg";
+	a[3]="s8.jpg";
+	a[4]="s9.jpg";
+	 
+	var i=0;
+	var j=0;
+	function change_img()
+        {
+        	document.getElementById("sssd").src=arr[i];
+	        i++;
+        	if(i==4)
+              	{
+                 	i=0;
+ 	        }
+	document.getElementById("ss").src=a[j];
+	        j++;
+        	if(j==5)
+              	{
+                 	j=0;
+ 	        }
+       
+        var t=setTimeout("change_img()",1500);
+
+        }    
+	
+
+</script>
+<LINK REL=STYLESHEET HREF=css1.CSS TYPE=TEXT/CSS>
+	</head>
+
+<body  onload="change_img()"bgcolor=940C0F>
+<bgsound src=m1.mp3>
+	<center>
+	<form name="form1">
+	<table  border=0 cellspacing=0 cellpadding=0>        <!------------First main table -------> 
+
+
+	    <tr>							   <!------------First row ---------->
+	       <td colspan=2>
+	          <table border=1 frame="rhs" bordercolor="cyan">
+		    <tr>
+		      <td><a href="indiantourist.html"><font color="white">Home</font></a> </td>
+		      <td><a href="aboutus.html"><font color="white">Contact-us </font></a></td></font>
+		    </tr>
+	          </table>
+	       </td>
+	    </tr>
+
+	    
+ 	    <tr>                                                           <!------------Second row ---------->
+	       <td colspan=2>
+		 <table border=0 cellspacing=0 cellpadding=0 width=100%>
+		    <tr> 
+		         <td bgcolor="gray"><img src="logo.gif" width=100%></td>
+		         <td bgcolor="black"><img src="north.jpg" width=100%></td>
+		         <td bgcolor="black"><img src="east.jpg" width=100%></td>
+		         
+		         <td bgcolor="black"><img src="west.jpg" width=100%></td>
+		         <td bgcolor="black"><img src="south.jpg" width=100%></td>		       
+		    </tr>
+		 </table>  
+	       </td>       
+	    </tr>
+	
+            <tr>							   <!------------Third row ---------->
+		<td colspan=2 bgcolor="darkSlateGray">
+		   <table bgcolor="darkSlateGray" width=100%>
+			<tr>
+			   <td><font color="cyan" size=4pt> <marquee>Welcome to etravels.com</marquee></font></td>
+			</tr>
+		   </table>
+		</td>
+            </tr>
+
+	    <tr>							   <!------------Fourth row ---------->
+	      <td colspan=2>
+               <hr color="gray">
+		
+	      </td>
+	    </tr>
+
+            <tr>								  <!------------Fifth row ---------->
+	       <td>
+		   <table border=0  bgcolor='#700C0F' cellspacing=0 cellpadding=0  >
+
+			<tr>
+				<td bgcolor='#700C0F'>
+				<font size=4pt color='CHOCOLATE'> Indian Zones tour </font></td>
+			<tr>
+
+			<tr>
+				<td bgcolor='#700C0F'><a href="north.html"><font color='WHEAT'>North India tour</font></a> </td>
+			<tr>
+
+			<tr>
+				<td bgcolor='#700C0F'> <a href="east.html"><font color='WHEAT'>East India tour</font></a> </td>
+			<tr>
+			
+
+			<tr>
+				<td bgcolor='#700C0F'> <a href="west.html"><font color='WHEAT'>West India tour</font></a> </td>
+			<tr>
+			
+			<tr>
+				<td bgcolor='#700C0F'> <a href="south.html"><font color='WHEAT'>South India tour</font></a> </td>
+			<tr>
+
+			<tr>
+				<td bgcolor='#700C0F'>
+				<font size=4pt color='chocolate'> Hill stations in India
+				</td>
+			<tr>
+
+
+			<tr>
+				<td bgcolor='#700C0F'><a href="khandala.html"><font color="WHEAT"> Hill station - Khandala</font></a> </td>
+			<tr>
+
+			<tr>
+				<td bgcolor='#700C0F'><a href="ooty.html"><font color="WHEAT">Hill station - Ooty</font></a></td>
+			<tr>
+
+			<tr>
+				<td bgcolor='#700C0F'><a href="shimla.html"><font color="WHEAT"> Hill station - Shimla</font></a> </td>
+			<tr>
+
+			<tr>
+				<td bgcolor='#700C0F'>
+				   <font size=4pt color='CHOCOLATE'> Pilgrimage sites in India
+				</td>
+			<tr>
+
+			<tr>
+				<td bgcolor='#700C0F'><a href="vaishnodevi.html"><font color="WHEAT"> Vaishno Devi </font></a></td>
+			<tr>
+
+			<tr>
+				<td bgcolor='#700C0F'><a href="tirupatibalaji.html"><font color="WHEAT"> Tirupati Balaji</font></a> </td>
+			<tr>
+
+			<tr>
+				<td bgcolor='#700C0F'><a href="goldentemple.html"><font color="WHEAT"> Golden Temple</font></a> </td>
+			<tr>
+
+			<tr>
+				<td >  <img src="inner.jpg"></img></td>
+			<tr>
+
+			<tr>
+				<td >  <img border="0" width=262 height=150 src="dancer.jpg"  id="sssd"></td>
+			<tr>
+		
+		  </table>
+	      </td>
+
+	      <td>
+		    <table>
+		      <tr>
+			<td>
+			    <table>
+		              <tr>
+				<td colspan=7>
+			          <center>
+		                    <table  width=70% frame="rhs" bgcolor='chocolate'>
+		                      <tr>
+			                <td><center><a href="indiantourist.html"><font color="black"><b>Home</b></font></a></center></td>
+					<td><center><a href="login.html"><font color="black"><b>Login</b></font></a></center></td>
+					<td><center><a href="logincancel.html"><font color="black"><b>Cancellation</b></font></a></center></td>
+					<td><center><a href="feedback.html"><font color="black"><b>Feed Back</b></font></a></center></td>
+					<td><center><a href="aboutus.html"><font color="black"><b>About Us</b><font></a></center></td>
+		                      </tr>
+		                    </table><br><br>
+	                          </center>
+				</td>
+			      </tr>
+
+			      <tr>
+				<td></td><td></td>
+				<td><center><img src="td-bg.gif" height=180> 
+				<img src="td-bg.gif" height=180>
+				<img src="td-bg.gif" height=180>
+				<img border="0" width=275 height=180 src="s1.jpg"  id="ss">
+				<img src="td-bg.gif" height=180>
+				<img src="td-bg.gif" height=180>
+				<img src="td-bg.gif" height=180></td>
+			      </tr>
+
+			      <tr>
+
+				<td colspan=7><font color="lightpink" size=3.5>
+				    <pre><b>          People don't remember you for what you are or from 
+               where you came..People remember you for 
+                     how you made them feel."</font></b>
+			            </pre>
+				</td>	
+                              </tr>
+			    </table>		
+	               </td>
+	             </tr>
+		    
+		     <tr>
+			
+		      <td>
+		       <font color="wheat" size=6>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;Tourist places of India</font> <br><br>
+		       <table frame="rhs" bgcolor="" background="button3.jpg" align=center>
+			<font color=blue>		
+			<tr>
+			       
+			       <td align=center ><u><a href="tirupatibalaji.html"><font color="black">Tirupati</font></a> <br><br></u></td>
+
+			       <td align=center><u><a href="goa.html"><font color="black"> Goa&nbsp;</font></a> <br><br></u></td>
+			       <td align=center><u><a href="shimla.html"><font color="black"> Shimla<br><br></u></td>
+                               
+				  <td align=center><u><a href="ooty.html"><font color="black"> Ooty</font></a><br><br></u></td>
+				<td align=center><u><a href="khandala.html"><font color="black"> Khandala</font></a> <br><br></u></td>
+
+                       </tr>
+                       <tr align="Center" colspan=5>
+
+			<td><td>	<td align=center><u><a href="Delhi.html"><font color="black"> Delhi</font></a> <br><br></u></td> <td><td>
+			</tr>
+			       
+			    <tr>
+			      <td align=center><u><a href="vaishnodevi.html"><font color="black">Vaishno Devi</font></a><br><br></u></td>
+			      
+			      <td align=center><u><a href="maharashtra.html"><font color="black"> Maharashtra </font></a><br><br></u></td>
+			      <td align=center><u><a href="jammukashmir.html"><font color="black"> Jammu Kashmir&nbsp;</font></a> <br><br></u></td>
+   
+			     <td align=center><u><a href="rajsthan.html"><font color="black"> Rajasthan <br><br></u></td>
+			    <td align=center><u><a href="goldentemple.html"><font color="black">Golden Temple</font></a> <br><br></u></td>				
+			     
+			</tr> 		
+			
+
+			</font>			
+
+		        </table>
+                  </td>
+
+	     </tr>
+
+           </table>
+	 </tr>
+
+         <tr>								<!---------Sixth row --------->
+		<td colspan=2>
+		   <table bgcolor="chocolate" width=100%>
+			<tr>
+			   <td> <marquee><b>Welcome to etravels.com</b></marquee></td>
+			</tr>
+		   </table>
+		</td>
+	 </tr>
+
+
+	     <tr>
+		<td colspan=2 bgcolor="wheat">
+		    <table frame="rhs" width=100% bordercolor="red">
+			 <tr>
+			    <font color="blue">
+			    <td><center><a href="indiantourist.html"><font color="black">Home</font></a></center></td>
+			   <td><center><a href="login.html"><font color="black"><b>Login</b></font></a></center></td>
+					<td><center><a href="logincancel.html"><font color="black"><b>Cancellation</b></font></a></center></td>
+					<td><center><a href="feedback.html"><font color="black"><b>Feed Back</b></font></a></center></td>
+					<td><center><a href="aboutus.html"><font color="black"><b>About Us</b><font></a></center></td>
+		                      </tr>
+		    </table>
+		</td>
+	     </tr>
+
+	     
+	     <tr>
+		<td colspan=2>
+		   <table bgcolor="chocolate" width=100%>
+			<tr>
+			   <td> <center>  etravels.com  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Copyright : 2008  </center>  </td>
+			</tr>
+		   </table>
+		</td>
+	     </tr>
+		
+	    </table>		<!---------First main table close --------->
+	   </form1>
+	 </center>
+</body>
+</html><

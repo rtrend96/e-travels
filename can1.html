@@ -1,0 +1,185 @@
+<html>
+<body onload=reset()>
+<form name=f1 id=f1>
+
+<a href=index.html><font color=black>HOME</a>
+<center>
+
+<br><br><br><br>
+
+<table bgcolor="700C0F" border=3 bordercolor=black width=60%>
+<tr><table bgcolor="700C0F" width=60%>
+<tr><td><font color=wheat>No. of Seats booked for Adults :</td><td><input type=text name=t1 size=3></td></tr>
+<tr><td><font color=wheat>No. of Seats booked for Children :</td><td><input type=text name=t2 size=3></td></tr>
+<tr></tr>
+<tr>
+<td><font color=wheat>Enter no. of tickets to be cancelled for adults = </td>
+<td><input type=text size=3 name=a></td>
+</tr>
+<tr>
+<td><font color=wheat>Enter no. of tickets to be cancelled for children = </td>
+<td><input type=text size=3 name=b></td>
+</tr>
+<tr></tr>
+<tr><td><center><input type=button name=clk onclick=chk() value=CANCEL></center></td></tr>
+</table>
+</tr>
+</table></form>
+</body>
+</html>
+
+<script language=vbscript>
+Set conn=CreateObject("ADODB.Connection")
+conn.Provider ="Microsoft.Jet.OLEDB.4.0" 
+conn.open = "f:\etravels\TRAV.MDB" 
+
+sub chk
+	noa=0 
+	noc=0
+	a1=0
+	c1=0
+	m=0
+	if document.f1.a.value <> 0 then
+	noa=eval(document.f1.a.value)	
+	end if
+
+	if document.f1.b.value <> 0 then
+	noc=eval(document.f1.b.value)
+	end if
+	
+	SET rs1=CREATEOBJECT("ADODB.RECORDSET")        
+	rs1.OPEN "SELECT * FROM Curr",conn,3,3
+	regid=eval(rs1("Regid"))
+	rs1.close
+	
+	rs1.open"select * from Book where Regid="&regid,conn,3,3
+	a1=eval(rs1("Adult"))
+	c1=eval(rs1("Child"))
+	rs1.close
+	document.f1.t1.value=a1
+	document.f1.t2.value=c1
+	if(eval(a1)<eval(noa)) then 	
+		alert " No. of Seats you have entered are more than the no. of seats you have booked"
+		alert "Enter valid no. of seats!!!"
+		document.f1.a.value=0		
+		m=1
+	end if		
+
+	
+	
+	if(eval(c1)<eval(noc)) then 	
+		alert " No. of Seats you have entered are more than the no. of seats you have booked"
+		alert "Enter valid no. of seats!!!"
+		document.f1.b.value=0
+		m=1
+	end if
+	if m=0 then
+	
+	SET rs=CREATEOBJECT("ADODB.RECORDSET")
+        rs.OPEN "SELECT * FROM Seatinfo where Regid="&regid,CONN,3,3
+	busid=rs("Busid")
+	
+	rs1.open"select * from Busdetails where Busid="&busid,conn,3,3
+	FareA=eval(rs1("FareA"))
+	FareC=eval(rs1("FareC"))
+	rs1.close
+	i=0
+	j=0
+	z=12
+	
+	SET rs2=CREATEOBJECT("ADODB.RECORDSET")
+	rs2.open"Select * from tocan",conn,3,3
+	
+	rs1.open"Select * from Cancel",conn,3,3
+	if eval(noa)>0 then
+	do until rs.EOF
+		if eval(i)<eval(noa) then
+		if eval(rs("Age"))>z then		
+		age=eval(rs("Age"))		
+		i=i+1
+		rs1.AddNew				
+		rs1("Regid")=rs("Regid")
+		
+		rs2.AddNew
+		rs2("Regid")=rs("Regid")
+		rs2.update
+		rs1("Busid")=rs("Busid")
+		rs1("Age")=rs("Age")
+		rs1("Seatno")=rs("Seatno")
+		rs1("Amt")=FareA
+		rs1.update
+		conn.execute"delete * from Seatinfo where Age="&eval(age)&"and Regid="&regid
+		end if
+		end if		
+		rs.movenext		
+	loop
+	rs1.close
+	end if
+	rs.close
+	rs.OPEN "SELECT * FROM Seatinfo where Regid="&regid,CONN,3,3
+	z=12
+	j=0
+	rs.movefirst
+	if rs1.state=1 then rs1.close
+	rs1.open"Select * from Cancel",conn,3,3
+	if eval(noc)>0 then
+	do until rs.EOF
+		if eval(j)<eval(noc) then
+		if eval(rs("Age"))<=z then
+
+		
+		age=eval(rs("Age"))
+		rs1.AddNew		
+		rs1("Regid")=rs("Regid")
+		rs1("Busid")=rs("Busid")
+		rs1("Age")=rs("Age")
+		rs1("Seatno")=rs("Seatno")
+		rs1("Amt")=FareC
+		rs1.update
+		conn.execute"delete * from Seatinfo where Age="&eval(age)&"and Regid="&regid
+		j=j+1
+		end if
+		
+		end if		
+		rs.MoveNext		
+	loop
+	end if
+	conn.execute"delete * from Curr"
+	rs.close
+
+	rs.open"Select * from Book where Regid="&regid,conn,3,3
+	rs("Adult")=eval(rs("Adult"))-eval(noa)
+	rs("Child")=eval(rs("Child"))-eval(noc)
+	
+	rs("Totfare")=rs("Totfare")-((eval(FareA)*eval(noa))+(eval(FareC)*eval(noc)))
+	rs.update
+	
+	Document.write("<a href=index.html><font color=black>HOME</a><center><table border=3 bordercolor=black width=60%><tr><td><h3><font color=940C0F>Your "& noa+noc&" tickets have been cancelled. Your refunded amount : Rs. "&(eval(FareA)*eval(noa))+(eval(FareC)*eval(noc))&" will be refunded back in your account!!!<br> Have a nice trip</td></tr></h3></table></font></center>")
+	
+	
+	end if
+end sub
+
+
+
+sub reset
+
+	SET rs1=CREATEOBJECT("ADODB.RECORDSET")        
+	rs1.OPEN "SELECT * FROM Curr",conn,3,3
+	regid=eval(rs1("Regid"))
+	rs1.close
+	
+	rs1.open"select * from Book where Regid="&regid,conn,3,3
+	a1=eval(rs1("Adult"))
+	c1=eval(rs1("Child"))
+	rs1.close
+	document.f1.t1.value=a1
+	document.f1.t2.value=c1
+	
+	document.f1.t1.disabled=True
+	document.f1.t2.disabled=True
+	document.f1.a.value=0	
+	document.f1.b.value=0
+end sub
+
+</script><

@@ -1,0 +1,80 @@
+<HTML>
+<BODY>
+<FORM NAME="FORM" method=POST action=book.html>
+<SCRIPT LANGUAGE=VBSCRIPT>
+Set conn=CreateObject("ADODB.Connection")
+conn.Provider ="Microsoft.Jet.OLEDB.4.0" 
+conn.open = "f:\etravels\TRAV.MDB" 
+
+SET rs2=CREATEOBJECT("ADODB.RECORDSET")
+rs2.open"select * from Curr",conn,3,3
+	regid=eval(rs2("Regid"))
+rs2.close
+	
+
+SET rs=CREATEOBJECT("ADODB.RECORDSET")
+RS.OPEN"sELECT * FROM Book where Regid="&regid,conn,3,3
+regid=eval(rs("regid"))
+busid=eval(rs("Busid"))
+way=eval(rs("way"))
+
+rs.close
+rs.open"Select * from Busdetails where Busid="&busid,conn,3,3
+origin=rs("Origin")
+Dest=rs("Dest")
+rs.close
+
+
+
+rs.open"Select * from Dates where Busid="&eval(busid),conn,3,3
+if eval(way)=eval(1) then
+document.write("<center><h3>Our Available Packages<br><br><br><Table bgcolor=700C0F bordercolor=wheat border=2 ><tr><th><font color=wheat>No.</th><th><font color=wheat>Origin</th><th><font color=wheat>Destination</th><th><font color=wheat>Departure Date</th><th><font color=wheat>Time</th><th colspan=2><font color=wheat>Click to Book</th></tr>")
+i=1
+do until rs.EOF
+document.write("<tr><td><font color=wheat>"&i&"</td><td><font color=wheat>"&Origin&"</td><td><font color=wheat>"&Dest&"</td><td><font color=wheat>"&rs("Jdate")&"</td><td><font color=wheat>"&rs("Time")&"</td><td colspan=2><center><input type=radio name=r></td></tr>")
+rs.MoveNext
+i=i+1
+loop
+document.write("<tr><td colspan=8><center> <input type=submit  value=Book onclick=bk()></td></tr></table>")
+document.write("</table>")
+
+else
+document.write("<center><h3>Our Available Packages<br><br><br><Table bgcolor=700C0F bordercolor=wheat border=2 ><tr><th><font color=wheat>No.</th><th><font color=wheat>Origin</th><th><font color=wheat>Destination</th><th><font color=wheat>Departure Date</th><th><font color=wheat>Return Date</th><th><font color=wheat>Time</th><th colspan=2><font color=wheat>Click to Book</th></tr>")
+i=1
+do until rs.EOF
+document.write("<tr><td><font color=wheat>"&i&"</td><td><font color=wheat>"&Origin&"</td><td><font color=wheat>"&Dest&"</td><td><font color=wheat>"&rs("Jdate")&"</td><td><font color=wheat>"&rs("Rdate")&"</td><td><font color=wheat>"&rs("Time")&"</td><td colspan=2><center><input type=radio name=r></td></tr>")
+rs.MoveNext
+i=i+1
+loop
+document.write("<tr><td colspan=8><center> <input type=submit  value=Book onclick=bk()></td></tr></table>")
+end if
+i=0
+sub bk
+	
+	for i=0 to 5 step 1
+		if(document.form.elements(i).checked) then			
+			exit for
+		end if				
+	next	
+	j=0
+	rs.close
+	rs.open"select * from Dates where Busid="&busid,conn,3,3
+	SET rs1=CREATEOBJECT("ADODB.RECORDSET")
+        rs1.open"Select * from Book where Regid="&regid&" and Busid="&busid,conn,3,3	
+	do until rs.EoF
+		if j=i then
+			rs1("Jdate")=rs("Jdate")
+			rs1("Rdate")=rs("Rdate")
+			rs1("Time")=rs("Time")
+			rs1.update
+			exit do
+		end if
+	rs.MoveNext		
+	j=j+1
+	loop
+end sub
+</SCRIPT>
+</FORM>
+
+	</BODY>
+</HTML>

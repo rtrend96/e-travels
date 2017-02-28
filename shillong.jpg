@@ -1,0 +1,287 @@
+<html>
+<head>
+	<title> Main page </title>
+</head>
+
+<body>
+	<center>
+	<form name="form1">
+	<table  border=0 cellspacing=0 cellpadding=0>        <!------------First main table -------> 
+
+
+	    <tr>							   <!------------First row ---------->
+	       <td colspan=2>
+	          <table border=1 frame="rhs" bordercolor="red">
+		    <tr><font color="blue">
+		      <td><a href="indiantourist.html"><font color="blue"> Home</font></a> </td>
+		      <td><a href="contactus.html"><font color="blue"> Contact-us </font></a></td></font>
+		    </tr>
+	          </table>
+	       </td>
+	    </tr>
+
+	    
+ 	    <tr>                                                           <!------------Second row ---------->
+	       <td colspan=2>
+		 <table border=0 cellspacing=0 cellpadding=0 width=100%>
+		    <tr> 
+		         <td bgcolor="magenta"><img src="logo.jpg" width=100%></td>
+		         <td bgcolor="black"><img src="north.jpg" width=100%></td>
+		         <td bgcolor="black"><img src="east.jpg" width=100%></td>
+		         <td bgcolor="black"><img src="central.jpg" width=100%></td>
+		         <td bgcolor="black"><img src="west.jpg" width=100%></td>
+		         <td bgcolor="black"><img src="south.jpg" width=100%></td>		       
+		    </tr>
+		 </table>  
+	       </td>       
+	    </tr>
+	
+            <tr>							   <!------------Third row ---------->
+		<td colspan=2 bgcolor="darkSlateGray">
+		   <table bgcolor="darkSlateGray" width=100%>
+			<tr>
+			   <td><font color="cyan" size=4pt> <marquee>Welcome to VisitIndiaOnline.com</marquee></font></td>
+			</tr>
+		   </table>
+		</td>
+            </tr>
+
+	    <tr>							   <!------------Fourth row ---------->
+	      <td colspan=2>
+		<table width=100%>
+		    <tr>
+			<td background="button5.jpg"> <font size=4 color="blue">Select Zone</font>
+			     <select name="zones">
+			     
+			     <option value="N-01">North</opton>
+			     <option value="E-01">East</opton>
+			     <option value="C-01">Central</opton>
+			     <option value="W-01">West</opton>
+			     <option value="S-01">South</opton>
+			     </select>
+                        </td>
+			<td background="button5.jpg"> <font size=4 color="blue">Select State</font>
+			     <select name="States">
+			     
+			     <option value="A-01">Assam</opton>
+			     <option value="A-02">Andhra Pradesh</opton>
+			     <option value="B-01">Bihar</opton>
+			     <option value="C-01">Chhatisgarh</opton>
+			     <option value="G-01">Goa</opton>
+			     <option value="G-02">Gujrat</opton>
+			     <option value="H-01">Hyderabad</opton>
+			     <option value="H-01">Haryana</opton>
+			     <option value="H-01">Himachal Pradesh</opton>
+			     <option value="J-01">Jammu kashmir</opton>
+			     <option value="H-01">Jharkhand</opton>
+			     <option value="H-01">Karnatak</opton>
+			     <option value="H-01">Kerala</opton>
+			     <option value="H-01">Madhya Pradesh</opton>
+			     <option value="H-01">Maharashtra</opton>
+			     <option value="H-01">Manipur</opton>
+			     <option value="H-01">Meghalay</opton>
+			     <option value="H-01">Mizoram</opton>
+			     <option value="H-01">Nagaland</opton>
+			     <option value="H-01">Orissa</opton>
+			     <option value="H-01">Punjab</opton>
+			     <option value="H-01">Sikkim</opton>
+			     <option value="H-01">Rajshthan</opton>
+			     <option value="H-01">Tamilnadu</opton>
+			     <option value="H-01">Tripura</opton>
+		                       <option value="H-01">Uttarakhand</opton>
+			     <option value="H-01">Uttar Pradesh</opton>
+			     <option value="H-01">West Bengal</opton>
+			     </select>
+			</td>
+		    </tr>
+		</table>
+	      </td>
+	    </tr>
+
+            <tr>								  <!------------Fifth row ---------->
+	       <td>
+		   <table border=0  bgcolor='LightSteelBlue' cellspacing=0 cellpadding=0  >
+
+			<tr>
+				<td bgcolor='LightSeaGreen'>
+				<font size=4pt color='black'> Indian Zones tour </font></td>
+			<tr>
+
+			<tr>
+				<td bgcolor='LightSteelBlue'><a href="north.html"><font color='black'>North India tour</font></a> </td>
+			<tr>
+
+			<tr>
+				<td bgcolor='LightSteelBlue'> <a href="north.html"><font color='black'>East India tour</font></a> </td>
+			<tr>
+
+			<tr>
+				<td bgcolor='LightSteelBlue'> <a href="north.html"><font color='black'>Central India tour</font></a> </td>
+			<tr>
+
+			<tr>
+				<td bgcolor='LightSteelBlue'> <a href="north.html"><font color='black'>West India tour</font></a> </td>
+			<tr>
+			
+			<tr>
+				<td bgcolor='LightSteelBlue'> <a href="north.html"><font color='black'>South India tour</font></a> </td>
+			<tr>
+
+			<tr>
+				<td bgcolor='LightSeaGreen'>
+				<font size=4pt color='black'> Hill stations in India
+				</td>
+			<tr>
+
+			<tr>
+				<td bgcolor='LightSteelBlue'><a href="auli.html"><font color="black">Hill station-Auli</font></a></td>
+			<tr>
+
+			<tr>
+				<td bgcolor='LightSteelBlue'><a href="khandala.html"><font color="black"> Hill station - Khandala</font></a> </td>
+			<tr>
+
+			<tr>
+				<td bgcolor='LightSteelBlue'><a href="ooty.html"><font color="black">Hill station - Ooty</font></a></td>
+			<tr>
+
+			<tr>
+				<td bgcolor='LightSteelBlue'><a href="shimla.html"><font color="black"> Hill station - Shimla</font></a> </td>
+			<tr>
+
+			<tr>
+				<td bgcolor='LightSeaGreen'>
+				<font size=4pt color='black'> Pilgrimage sites in India
+				</td>
+			<tr>
+
+			<tr>
+				<td bgcolor='LightSteelBlue'><a href="vaishnodevi.html"><font color="black"> Vaishno Devi </font></a></td>
+			<tr>
+
+			<tr>
+				<td bgcolor='LightSteelBlue'><a href="tirupatibalaji.html"><font color="black"> Tirupati Balaji</font></a> </td>
+			<tr>
+
+			<tr>
+				<td bgcolor='LightSteelBlue'><a href="goldentemple.html"><font color="black"> Golden Temple</font></a> </td>
+			<tr>
+
+			<tr>
+				<td bgcolor='LightSteelBlue'><a href="bodhgaya.html"><font color="black"> Bodhgaya tour </font></a></td>
+			<tr>
+			
+			<tr>
+				<td >  <img src="inner.jpg"></img></td>
+			<tr>
+
+		  </table>
+	      </td>
+
+	      <td>
+		     <table width=100%>
+		         <tr>
+			    <td>
+			         <center>
+		                    <table  width=70% frame="rhs" bgcolor='LightSeaGreen'>
+		                      
+                                      <tr>
+			                <td><center><a href="indiantourist.html"><font color="black">Home</font></a></center></td>
+					<td><center><a href="contactus.html"><font color="black">contact</font></a></center></td>
+					<td><center><a href="query.html"><font color="black">Query</font></a></center></td>
+					<td><center><a href="outlookexpress"><font color="black">Email</font></a></center></td>
+					<td><center><a href="feedback.html"><font color="black">Feedback<font></a></center></td>
+		                      </tr>
+
+		                    </table><br>
+	                          </center>
+			    </td>
+			</tr>
+
+                        <tr>
+			   <td>
+			     <table border=0 width=100% bgcolor='Lavender'>
+				
+				<tr>
+				   <td colspan=2><font size=6pt color='blue'>Travel Shillong</font></td>
+				</tr>   
+
+			        <tr>
+				   
+				   <td><pre><font size=2pt>Situated at an altitude of 1500 metres
+above sea level, Shillong is an 
+exquisite hill station nestling
+on a plateau of the Khasi and 
+Jaintia hills os Assam. Visit 
+the secretariet, Raj bhawan ward,
+lake Bishop and Beadon Falls,The 
+gold cup and of course the 
+colourful Bazzars.
+</font><pre> </td>
+				   
+                                <td><img src="shillong-inda.jpg"></td>
+                                </tr>
+				
+				 <tr>
+
+                                   <td colspan=2>
+				      <table bgcolor='Gainsboro' width=100%>
+					 
+                                          
+					 
+				      </table>
+				   </td>
+				     
+                                </tr>
+
+				 
+			     </table>		
+			   </td>
+	                </tr>			      
+                    </table>
+	       </td>
+	 </tr>
+
+         <tr>								<!---------Sixth row --------->
+		<td colspan=2>
+		   <table bgcolor="chocolate" width=100%>
+			<tr>
+			   <td> <marquee>Welcome to VisitIndiaOnline.com</marquee></td>
+			</tr>
+		   </table>
+		</td>
+	 </tr>
+
+
+	     <tr>
+		<td colspan=2 bgcolor="darkSlateGray">
+		    <table frame="rhs" width=100% bordercolor="red">
+			 <tr>
+			    <font color="blue">
+			    <td><center><a href="indiantourist.html"><font color="black">Home</font></a></center></td>
+			    <td><center><a href="contactus.html"><font color="black"> contact</font></a></center><td>
+			    <td><center><a href="query.html"><font color="black"> Query</font></a></center></td>
+			    <td><center><a href="email.html"><font color="black"> Email</font></a></center></td>
+			    <td><center><a href="feedback.html"><font color="black"> Feed Back</font></a></center></td>
+			    </font>
+			 <tr>
+		    </table>
+		</td>
+	     </tr>
+
+	     
+	     <tr>
+		<td colspan=2>
+		   <table bgcolor="chocolate" width=100%>
+			<tr>
+			   <td> <center>  VisitIndiaOnline.com  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Copyright : 2001  </center>  </td>
+			</tr>
+		   </table>
+		</td>
+	     </tr>
+		
+	    </table>		<!---------First main table close --------->
+	   </form1>
+	 </center>
+</body>
+</html>

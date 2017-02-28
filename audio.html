@@ -1,0 +1,31 @@
+<audio controls height="100" width="100">
+  <source src="horse.mp3" type="audio/mpeg">
+  <source src="horse.ogg" type="audio/ogg">
+  <embed height="50" width="100" src="horse.mp3">
+</audio>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<video width="320" height="240" controls autoplay>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  <source src="movie.webm" type="video/webm">
+Your browser does not support video
+</video>
+
+</body>
+</html>
+
+
+//best soln.
+
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  <source src="movie.webm" type="video/webm">
+  <object data="movie.mp4" width="320" height="240">
+    <embed src="movie.swf" width="320" height="240">
+  </object>
+</video>
